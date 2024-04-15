@@ -1,0 +1,55 @@
+// responsive
+
+@mixin media($size) {
+  @if ($size == sm) {
+    @media all and (min-width: 640px) {
+      @content;
+    }
+  } @else if ($size == md) {
+    @media all and (min-width: 768px) {
+      @content;
+    }
+  } @else if ($size == lg) {
+    @media all and (min-width: 1024px) {
+      @content;
+    }
+  } @else if ($size == xl) {
+    @media all and (min-width: 1280px) {
+      @content;
+    }
+  }
+}
+
+// btn
+
+@mixin btn {
+  display: inline-block;
+  background-color: $gunmetalClr;
+  color: $lightTextClr;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  text-transform: uppercase;
+}
+
+@mixin secondaryBtn {
+  @include btn;
+  background-color: $culturedClr;
+  color: $textClr;
+}
+
+// font
+
+@mixin poppinsFont {
+  font-family: "Poppins", sans-serif;
+}
+
+// hamburger menu
+
+@mixin hamburgerMenu {
+  border-radius: 50px;
+  width: 3rem;
+  height: 0.2rem;
+  background-color: $titleClr;
+  position: absolute;
+  transition: all 200ms ease-in-out;
+}
